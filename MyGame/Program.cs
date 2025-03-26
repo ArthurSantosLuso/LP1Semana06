@@ -34,7 +34,7 @@ namespace MyGame
 
             Console.WriteLine($"{enemies[0].GetName()} {enemies[0].GetHealth()} {enemies[0].GetShield()}");
 
-
+            Console.WriteLine(Enemy.GetTotalPowerUpCount());
 
 
         }
