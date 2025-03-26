@@ -6,8 +6,7 @@ namespace MyGame
     {
         private static void Main(string[] args)
         {
-            Enemy[] enemies = new Enemy[2];
-            //Enemy[] enemies = new Enemy[int.Parse(args[0])];
+            Enemy[] enemies = new Enemy[int.Parse(args[0])];
 
             for(int i = 0; i < enemies.Length; i++)
             {
