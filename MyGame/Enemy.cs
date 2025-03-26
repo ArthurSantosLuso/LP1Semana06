@@ -13,7 +13,7 @@ namespace MyGame
         {
             SetName(name);
             health = 100;
-            shield = 100;
+            shield = 0;
         }
 
         public string GetName()
