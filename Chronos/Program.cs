@@ -23,7 +23,8 @@ namespace Chronos
             crono1.Stop();
             crono2.Stop();
 
-
+            Console.WriteLine(string.Format("{0:F4}", crono1.Elapsed.TotalSeconds));
+            Console.WriteLine(string.Format("{0:F4}", crono2.Elapsed.TotalSeconds));
         
         }
     }
