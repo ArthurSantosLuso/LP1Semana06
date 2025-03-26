@@ -1,3 +1,4 @@
+using System;
 using System.Net.NetworkInformation;
 
 namespace MyGame
@@ -44,7 +45,7 @@ namespace MyGame
 
         public void SetName(string newName)
         {
-            name = newName.Substring(0, 7);
+            name = newName.Substring(0, Math.Min(8, newName.Length));
         }
     }
 }

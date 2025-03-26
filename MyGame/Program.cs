@@ -6,7 +6,15 @@ namespace MyGame
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello LP1!");
+            Enemy[] enemies = new Enemy[2];
+            //Enemy[] enemies = new Enemy[int.Parse(args[0])];
+
+            for(int i = 0; i < enemies.Length; i++)
+            {
+                Console.Write($"Nome do inimigo {i + 1}: ");
+                enemies[i] = new Enemy(Console.ReadLine());
+            }
+
         }
     }
 }
