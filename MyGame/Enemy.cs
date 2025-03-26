@@ -47,5 +47,34 @@ namespace MyGame
         {
             name = newName.Substring(0, Math.Min(8, newName.Length));
         }
+
+        public void PickupPowerUp(PowerUp powerUp, float value)
+        {
+            if (powerUp == PowerUp.Health || powerUp == PowerUp.Shield)
+            {
+                if(health + value > 100)
+                {
+                    float actualValueToIncrease = Math.Min(value, 100 - GetHealth());
+                    health += actualValueToIncrease;
+                }
+                else
+                {
+                    health += value;
+                }
+            }
+
+            if (powerUp == PowerUp.Shield)
+            {
+                if (shield + value > 100)
+                {
+                    float actualValueToIncrease = Math.Min(value, 100 - GetShield());
+                    shield += actualValueToIncrease;
+                }
+                else
+                {
+                    shield += value;
+                }
+            }
+        }
     }
 }
