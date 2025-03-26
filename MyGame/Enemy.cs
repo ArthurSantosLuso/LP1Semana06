@@ -5,9 +5,15 @@ namespace MyGame
 {
     public class Enemy
     {
+        private static int poweUpCollectedCnt;
         private string name;
         private float health;
         private float shield;
+
+        static Enemy()
+        {
+            poweUpCollectedCnt = 0;
+        }
 
         public Enemy(string name)
         {
@@ -75,6 +81,13 @@ namespace MyGame
                     shield += value;
                 }
             }
+
+            poweUpCollectedCnt++;
+        }
+
+        public static int GetTotalPowerUpCount()
+        {
+            return poweUpCollectedCnt;
         }
     }
 }
