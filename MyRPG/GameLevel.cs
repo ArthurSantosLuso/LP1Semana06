@@ -17,10 +17,6 @@ namespace MyRPG
 
         public void SetEnemyInRoom(int roomIndex, Enemy enemy)
         {
-            if (roomIndex < 0 || roomIndex >= rooms.Length)
-            {
-                throw new ArgumentOutOfRangeException(nameof(roomIndex), "Room index out of bounds");
-            }
             rooms[roomIndex] = enemy;
         }
         public Hardness GetHardness()
