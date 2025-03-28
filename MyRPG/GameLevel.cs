@@ -23,5 +23,38 @@ namespace MyRPG
             }
             rooms[roomIndex] = enemy;
         }
+        public Hardness GetHardness()
+        {
+            return difficulty;
+        }
+
+        public int GetNumRooms()
+        {
+            return rooms.Length;
+        }
+
+        public int GetNumEnemies()
+        {
+            int count = 0;
+            foreach (var enemy in rooms)
+            {
+                if (enemy != null)
+                {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        public void PrintEnemies()
+        {
+            for (int i = 0; i < rooms.Length; i++)
+            {
+                if (rooms[i] != null)
+                {
+                    Console.WriteLine($"Room {((i).ToRoman())}: {rooms[i].GetName()}");
+                }
+            }
+        }
     }
 }
